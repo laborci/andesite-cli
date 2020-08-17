@@ -1,0 +1,17 @@
+{
+  "name": "andesite/cli",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gergely Laborci",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">7.3",
+    "symfony/console": "^3.0",
+    "ext-json": "*"
+  },
+  "bin": ["andesite"]
+}

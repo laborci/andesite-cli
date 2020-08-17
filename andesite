@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+if(!file_exists('composer.json')){
+    die ('ERROR: composer.json not found'."\n");
+}
+$composer = json_decode(file_get_contents('composer.json'), true);
+if(!array_key_exists('extra', $composer) || !array_key_exists('andesite-boot', $composer['extra'])){
+    die('ERROR: extra/andesite-boot not found in composer.json');
+}
+$boot = $composer['extra']['andesite-boot'];
+include getcwd().'/'.$boot;
